@@ -44,6 +44,7 @@ h4 {
     background-color: orange;
     border-color: orange;
     font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-linkedin:hover {
@@ -57,6 +58,7 @@ h4 {
     border-color:black;
     color: white;
     font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-github:hover {
@@ -73,6 +75,7 @@ h4 {
     font-size: 1.5em;
     margin-top: 1.7em;
     margin-bottom: 0.9em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-telecharger:hover {
@@ -213,6 +216,7 @@ h4 {
     border-top: 0.3em solid #ccc; /* Barre grise de 1 pixel avec couleur #ccc */
     margin-top: 5em; /* Marge supérieure pour l'espace entre les rangées */
     margin-bottom: 5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .page-divider-end {
@@ -234,9 +238,14 @@ h4 {
     text-align: center; /* Centrer le texte dans le footer */
 }
 
-#contenair {
-    display: none;
+.conteneurRight {
+    position: relative;
 }
+
+.conteneurLeft {
+    position: relative;
+}
+
 
 .glisser-droite {
     animation-name: glissementDroite;
@@ -245,7 +254,7 @@ h4 {
 
 @keyframes glissementDroite {
     from {
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
     to {
         transform: translateX(0);
@@ -259,9 +268,20 @@ h4 {
 
 @keyframes glissementGauche {
     from {
-        transform: translateX(100%); /* Commence à 100% de la largeur du conteneur */
+        transform: translateX(-100%); /* Commence à 100% de la largeur du conteneur */
     }
     to {
         transform: translateX(0); /* Se termine à 0 (position d'origine) */
     }
 }
+
+.progress-bar {
+    width: 0; /* La largeur initiale est de 0 */
+    transition: width 1s ease-in-out; /* Animation de la largeur */
+}
+
+.box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-block: 3em;
+}
+
