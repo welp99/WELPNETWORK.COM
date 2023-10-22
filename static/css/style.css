@@ -149,3 +149,8 @@ h4 {
     margin-top: 5em;
     margin-bottom: 5em;
 }
+
+.row-divider {
+    border-top: 0.3em solid #ccc; /* Barre grise de 1 pixel avec couleur #ccc */
+    margin-top: 1em;
+}
